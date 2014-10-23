@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+	<form>
+		<input type="text" id='profile_name'>
+		<a href="#" id='fetch_github_profile'>Fetch</a>
+	</form>
+
+	<section id='avatar_feed'>
+	</section>
+
+
+
+
+
+
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+
+		$('#fetch_github_profile').on('click', function(){
+			var profile_name = $('#profile_name').val();
+			$.get('https://api.github.com/users/elenagarrone', function(){
+			$('#avatar_feed').append(profile_name);
+			}); 
+			
+		});
+		</script>
+
+	</body>
+
+</html>
