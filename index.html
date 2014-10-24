@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
-		<meta charset="UTF-8">
+	<head>	
 	</head>
+	<body> 
+		<main>
+		<section>
+			<input type="text" id="profile_name" placeholder="Enter github profile username"
+			onfocus="if(this.value!=='Enter github profile username')this.value=''"/>
+			<a href="#" id="fetch_github_profile">Fetch</a>
+		</section>
 
-	<body>
+		<section id="profiles">
+		</section>
 
-	<form>
-		<input type="text" id='profile_name'>
-		<a href="#" id='fetch_github_profile'>Fetch</a>
-	</form>
+		<template id="profileTemplate">
+			<img src="{{avatar_url}}"/>
+			<h1>Name: {{name}}</h1>
+			<h2>Username: {{login}}</h2>
+			<p>Followers: {{followers}}</p>
+			<p>Public repos: {{public_repos}}</p>	
+		</template>
+		</main>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="handlebars.js"></script>
+			<script type="text/javascript" src="personal.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
 
-	<section id='avatar_feed'>
-	</section>
-
-
-
-
-
-
-		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript">
-
-		$('#fetch_github_profile').on('click', function(){
-			var profile_name = $('#profile_name').val();
-			$.get('https://api.github.com/users/elenagarrone', function(){
-			$('#avatar_feed').append(profile_name);
-			}); 
-			
-		});
-		</script>
-
+					$('#fetch_github_profile').on('click', function() {
+						var userName = $('#profile_name').val();
+						var source = $("#profileTemplate").html();
+						var template = Handlebars.compile(source); 
+						$.get('https://api.github.com/users/' + userName + '?client_id=' + id + '&client_secret=' + secret, function(data) {
+							$('#profiles').append(template(data));
+						});
+					});
+				});
+			</script>
 	</body>
-
 </html>
