@@ -1,0 +1,42 @@
+body {
+  background-image: url("background_image.jpg");
+  background-size: cover;
+}
+
+body header {
+  background: darkcyan;
+  height: 40px;
+  text-align: center;
+}
+
+body header section {
+  padding: 0.45% 0% 0% 0%;
+}
+
+body header section img {
+  height: 180px;
+  display: inline;
+}
+
+body header section input {
+  height: 25px;
+  border-radius: 4px;
+  border-style: none;
+  border: 1px solid grey;
+  text-align: center;
+  padding: 0% 0.5% 0% 0.5%;
+}
+
+body header section a {
+  background: orange;
+  padding: 0.2% 1% 0.5% 1%;
+  border-radius: 2px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+body main section#profiles {
+  height: 200px;
+  width: 500px;
+  margin: 5% auto 2% auto;
+}

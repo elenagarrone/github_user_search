@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="public/reset.css">
+		<link rel="stylesheet" type="text/css" href="public/style.css">
 	</head>
 	<body>
-		<main>
-		<section>
-			<input type="text" id="profile_name" placeholder="Enter github profile username"
-			onfocus="if(this.value!=='Enter github profile username')this.value=''"/>
-			<a href="#" id="fetch_github_profile">Fetch</a>
-		</section>
+		<header>
+			<section>
+				<input type="text" id="profile_name" placeholder="Enter github username..."
+				onfocus="if(this.value!=='Enter github profile username')this.value=''"/>
+				<a href="#" id="fetch_github_profile">Fetch</a>
+			</section>
+		</header>
 
+		<main>
 		<section id="profiles">
 		</section>
 
 		<template id="profileTemplate">
 			<img src="{{avatar_url}}"/>
-			<h1>Name: {{name}}</h1>
-			<h2>Username: {{login}}</h2>
-			<p>Followers: {{followers}}</p>
-			<p>Public repos: {{public_repos}}</p>
+			<section id="profile_info">
+				<h1>Name: {{name}}</h1>
+				<h2>Username: {{login}}</h2>
+				<p>Followers: {{followers}}</p>
+				<p>Public repos: {{public_repos}}</p>
+			</section>
 		</template>
 		</main>
+
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 			<script type="text/javascript" src="handlebars.js"></script>
 			<script type="text/javascript" src="personal.js"></script>
