@@ -7,15 +7,11 @@ body header {
   background: darkcyan;
   height: 40px;
   text-align: center;
+  margin-bottom: 4%;
 }
 
 body header section {
   padding: 0.45% 0% 0% 0%;
-}
-
-body header section img {
-  height: 180px;
-  display: inline;
 }
 
 body header section input {
@@ -35,8 +31,24 @@ body header section a {
   text-decoration: none;
 }
 
-body main section#profiles {
+body main section#profiles section#each_profile{
+  background-color: rgba(237, 237, 237, 0.7);
   height: 200px;
   width: 500px;
-  margin: 5% auto 2% auto;
+  margin: 0% auto 2% auto;
+}
+
+body main section#profiles article#profile_info{
+  width: 258px;
+  height: 89px;
+  line-height: 1.5;
+  display: inline-block;
+  margin: 10% 2% 0% 2%;
+  vertical-align: top;
+}
+
+body main section#profiles img {
+  height: 180px;
+  display: inline;
+  padding: 2% 2% 2% 2%;
 }

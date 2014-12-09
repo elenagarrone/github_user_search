@@ -18,12 +18,14 @@
 		</section>
 
 		<template id="profileTemplate">
-			<img src="{{avatar_url}}"/>
-			<section id="profile_info">
-				<h1>Name: {{name}}</h1>
-				<h2>Username: {{login}}</h2>
-				<p>Followers: {{followers}}</p>
-				<p>Public repos: {{public_repos}}</p>
+			<section id="each_profile">
+				<img src="{{avatar_url}}"/>
+				<article id="profile_info">
+					<h1>Name: {{name}}</h1>
+					<h2>Username: {{login}}</h2>
+					<p>Followers: {{followers}}</p>
+					<p>Public repos: {{public_repos}}</p>
+				</article>
 			</section>
 		</template>
 		</main>
