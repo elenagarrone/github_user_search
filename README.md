@@ -4,7 +4,9 @@ During week 6 we created an app that allows to search for Github users by enteri
 
 <img src="http://i61.tinypic.com/16lbltv.jpg">
 
-You can try it here: https://github-user-search.herokuapp.com/
+Heroku
+------
+Try it here: https://github-user-search.herokuapp.com/
 
 Technologies
 ----
