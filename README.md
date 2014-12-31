@@ -2,7 +2,7 @@ Github user search
 ==================
 During week 6 we created an app that allows to search for Github users using the Github API.
 
-<img src="http://i61.tinypic.com/16lbltv.jpg">
+<img src="public/images/screenshot.png">
 
 Specification:
 --------------
