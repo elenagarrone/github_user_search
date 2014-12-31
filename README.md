@@ -1,6 +1,8 @@
+[![Code Climate](https://codeclimate.com/github/elenagarrone/github_user_search/badges/gpa.svg)](https://codeclimate.com/github/elenagarrone/github_user_search)
+
 Github user search
 ==================
-During week 6 we created an app that allows to search for Github users using the Github API.
+During week 6 we created an app that allows to search for GitHub users using the GitHub API.
 
 <img src="public/images/screenshot.png">
 
