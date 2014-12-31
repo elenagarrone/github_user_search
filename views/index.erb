@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<header>
-			<section>
-				<input type="text" id="profile_name" placeholder="Enter github username..."
-				onfocus="if(this.value!=='Enter github profile username')this.value=''"/>
-				<a href="#" id="fetch_github_profile">fetch</a>
-			</section>
-		</header>
+  <head>
+    <title>Github user search</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header>
+      <section>
+        <input type="text" id="profile_name" placeholder="Enter github username..." onfocus="if(this.value!=='Enter github profile username')this.value=''"/>
+        <a href="#" id="fetch_github_profile">fetch</a>
+      </section>
+    </header>
 
-		<main>
-		<section id="profiles">
-		</section>
+    <main>
+      <section id="profiles"></section>
 
-		<template id="profileTemplate">
-			<section id="each_profile">
-				<img src="{{avatar_url}}"/>
-				<article id="profile_info">
-					<h1>Name: {{name}}</h1>
-					<h2>Username: {{login}}</h2>
-					<p>Followers: {{followers}}</p>
-					<p>Public repos: {{public_repos}}</p>
-				</article>
-			</section>
-		</template>
-		</main>
+      <template id="profileTemplate">
+        <section id="each_profile">
+          <img src="{{ avatar_url }}"/>
+          <article id="profile_info">
+            <h1>Name: {{ name }}</h1>
+            <h2>Username: {{ login }}</h2>
+            <p>Followers: {{ followers }}</p>
+            <p>Public repos: {{ public_repos }}</p>
+          </article>
+        </section>
+      </template>
+    </main>
 
-			<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-			<script type="text/javascript" src="handlebars.js"></script>
-			<script type="text/javascript" src="personal.js"></script>
-			<script type='text/javascript' src="infoApi.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="handlebars.js"></script>
+    <script type="text/javascript" src="personal.js"></script>
+    <script type='text/javascript' src="infoApi.js"></script>
+		
 	</body>
 </html>
